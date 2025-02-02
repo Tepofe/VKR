@@ -22,8 +22,6 @@ if __name__ == '__main__':
     # ориентируем многогранник
     faf.orient(faf.Facet.facets)
 
-    print(faf.Facet.all_vertexes)
-    print(list(set(faf.Facet.all_vertexes)))
     # проверяем согласованность ориентаций
     if not faf.count_pairs(faf.Facet.facets):
         faf.Facet.set_OK()
