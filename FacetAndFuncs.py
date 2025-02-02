@@ -4,7 +4,7 @@ class Facet:
     facets = []  # список всех граней многогранника
     OK = False  # атрибут, отвечающий за ориентируемость (начальное значение False - неориентируем)
     euler_val = -1  # значение эйлеровой характеристики многогранника
-    rod_val = -1  # з
+    rod_val = -1  # род многогранника
 
     def __init__(self, vertexes: list):  #
         self.vertexes = vertexes  #
@@ -146,7 +146,7 @@ def sorting(coord):  # функция для упорядочивания вер
     return result
 
 
-def orient(input_vertex):  # функция согласования ориентаций
+def orient(input_vertex):  # процедура согласования ориентаций
     for i in range(len(input_vertex)):
         if i == 0:
             input_vertex[i].wasOKed = True
